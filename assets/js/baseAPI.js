@@ -8,12 +8,12 @@ $.ajaxPrefilter(function(params) {
         }
     }
 
-    params.complete = function(res) {
-        if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败！") {
-            //清空本地token
-            localStorage.removeItem("token");
-            //页面跳转
-            location.href = "/login.html"
-        }
-    }
+    // params.complete = function(res) {
+    //     if (res.responseJSON.status === 1 && res.responseJSON.message === "身份认证失败！") {
+    //         //清空本地token
+    //         localStorage.removeItem("token");
+    //         //页面跳转
+    //         location.href = "/login.html"
+    //     }
+    // }
 })
